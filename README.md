@@ -1,6 +1,6 @@
 # README
 
-This README will document whatever steps are necessary to get the
+This README documents whatever steps are necessary to get the
 application up and running.
 
 Things I will to cover:
