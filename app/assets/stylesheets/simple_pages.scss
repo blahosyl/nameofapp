@@ -61,3 +61,41 @@ margin-top: 10px;
 padding-top: 4px;
 padding-bottom: 4px;
 }
+
+/* Image carousel */
+.carousel-caption {
+  font-family: Nunito, Helvetica, Arial, sans-serif;
+  /* top: 0;
+  bottom: auto; */
+  /* text-align:right;
+  left: auto;
+  right: 10%; */
+}
+
+#carouselExampleIndicators {
+  padding-top: 65px;
+}
+
+.d-block{
+margin: auto;
+}
+
+.carousel-caption {
+  bottom: 75%;
+}
+
+.carousel-caption h3 {
+  color: var(--light);
+}
+
+.carousel-item{
+  width: 100%;
+}
+
+.carousel-indicators li {
+  background-color: var(--med-light);
+}
+
+.carousel-indicators .active{
+  background-color: var(--bright);
+}
