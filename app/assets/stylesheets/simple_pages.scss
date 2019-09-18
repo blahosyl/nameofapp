@@ -32,6 +32,11 @@ text-align: center;
 color: var(--med-light);
 }
 
+p {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 // Page showing product information
 #notice {
   padding-top: 40px; //because of navbar
