@@ -56,6 +56,15 @@ p {
   text-transform: uppercase;
 }
 
+#search-nav .btn,
+#search-nav .field{
+  display: inline;
+}
+
+#search-nav{
+  float:none;
+}
+
 // footer
 
 #cr {
@@ -77,6 +86,38 @@ padding-bottom: 4px;
   right: 10%; */
 }
 
+// forms
+
+.field input,
+.field textarea {
+  background-color: var(--quite-light);
+}
+
+
+.field label {
+  color: var(--med-dark);
+}
+
+// buttons
+.btn {
+  background: var(--med-dark);
+  color: var(--light);
+  border: var(--dark);
+}
+
+.btn:hover {
+  background: var(--bright);
+  color: var(--light);
+  border: var(--dark);
+}
+
+.btn input {
+  background-color: inherit;
+  border: none;
+  color: white;
+}
+
+// image carousel
 #carouselExampleIndicators {
   padding-top: 65px;
 }
