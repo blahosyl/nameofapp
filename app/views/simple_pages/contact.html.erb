@@ -1,3 +1,23 @@
 <h1>How you can reach us</h1>
 <!-- <p>Find me in app/views/simple_pages/contact.html.erb</p> -->
-Send us an email – we'll be sure to get back to you within 24 hours.
+Send us a message – we'll be sure to get back to you within 24 hours.
+
+<%= flash[:notice] %>
+
+<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+<div class="row">
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  </div>
+</div>
+<%= form.submit "Send", class: "form_label" %>
+<% end %>
