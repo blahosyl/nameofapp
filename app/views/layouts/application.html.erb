@@ -59,11 +59,14 @@
 </div>
 </nav>
 
-<!-- flash notices for signin -->
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<!-- flash notices and alerts -->
+<% if notice %>
+    <p id="notice" class="alert alert-primary"><%= notice %></p>
+<% end %>
 
-
+<% if alert %>
+    <p id="alert" class="alert alert-primary"><%= alert %></p>
+<% end %>
 
     <%= yield %>
 
