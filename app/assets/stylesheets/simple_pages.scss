@@ -141,6 +141,12 @@ form .btn
   border: var(--dark);
 }
 
+#search-nav .btn:hover {
+  background: var(--med-light);
+  color: var(--light);
+  border: var(--dark);
+}
+
 .btn input {
   background-color: inherit;
   border: none;
