@@ -1,11 +1,13 @@
 <h1>How you can reach us</h1>
 <!-- <p>Find me in app/views/simple_pages/contact.html.erb</p> -->
-Send us a message – we'll be sure to get back to you within 24 hours.
+
+
+<div class="standalone_form container-fluid" id="contact_form">
+<p>Send us a message – we'll be sure to get back to you within 24 hours.</p>
 
 <%= flash[:notice] %>
 
 <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-<div class="row">
   <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
@@ -17,7 +19,7 @@ Send us a message – we'll be sure to get back to you within 24 hours.
   <div class="form-group">
     <%= form.label :message %>
     <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
-  </div>
 </div>
-<%= form.submit "Send", class: "form_label" %>
+<%= form.submit "Send", class: "form_label btn" %>
 <% end %>
+</div>

@@ -15,16 +15,21 @@
   --light: #fffdfc;
 }
 
+body {
+  padding-top: 50px; //because of navbar
+
+}
+
 h1 {
 text-align: center;
 color: var(--bright);
-padding-top: 80px; //because of navbar
 padding-bottom: 40px;
 }
 
 h2 {
 text-align: center;
 color: var(--med-light);
+padding-bottom: 40px;
 }
 
 strong {
@@ -89,8 +94,33 @@ padding-bottom: 4px;
 // forms
 
 .field input,
-.field textarea {
+.field textarea,
+.form-group input,
+.form-group textarea {
   background-color: var(--quite-light);
+}
+
+#contact_form {
+ width:40%;
+}
+
+.standalone-form,
+.new_user,
+form  {
+text-align: center;
+}
+
+.standalone-form .field,
+.standalone-form .btn,
+.standalone-form .links,
+.new_user .field,
+.new_user .btn,
+.new_user .links,
+form .btn
+  {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 
