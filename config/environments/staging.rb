@@ -90,7 +90,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # dynamic links that show up inside emails production environment generate the right URLs
-  config.action_mailer.default_url_options = { host: 'orange-berlin.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'orange-berlin-staging.herokuapp.com' }
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
