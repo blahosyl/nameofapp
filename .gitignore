@@ -35,3 +35,5 @@ yarn-debug.log*
 .yarn-integrity
 sendgrid.env
 app/mailers/.DS_Store
+vendor/assets/javascripts/.DS_Store
+vendor/assets/stylesheets/.DS_Store
