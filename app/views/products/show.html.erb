@@ -1,29 +1,47 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container-fluid">
+  <p>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  </p>
+  <div class="row">
+    <div class="col-md">
+      <%= image_tag(@product.image_url, class: "img-fluid") %>
+    </div>
+    <div class="col-md">
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
-<p>
-  <strong>Image URL:</strong>
-  <%= @product.image_url %>
-</p>
+      <p>
+        <strong>Colour:</strong>
+        <%= @product.colour %>
+      </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+      <p>
+        <strong>Price:</strong>
+        <%= @product.price %>
+      </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+      <p>
+        <strong><i class="fas fa-thumbs-up"></i> Best rating:</strong>
+        <%= @product.highest_rating_comment %>
+      </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <p>
+        <strong><i class="fas fa-thumbs-down"></i> Worst rating:</strong>
+        <%= @product.lowest_rating_comment %>
+      </p>
+
+    </div><!-- /col -->
+
+  </div>
+
+</div>
