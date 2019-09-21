@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource # check user permissions to see if they are authorised to perform the action
+  
   # GET /products
   # GET /products.json
   def index

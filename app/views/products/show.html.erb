@@ -2,7 +2,9 @@
 
 <div class="container-fluid">
   <p>
-    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <% if signed_in? && current_user.admin? %>
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <% end %>
     <%= link_to 'Back', products_path %>
   </p>
   <div class="row">
@@ -31,6 +33,12 @@
 
       <p><strong>Average Rating</strong>: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
+      <%if highest_rating_comment = "" %>
+
+        <p>No comments for this product yet.</p>
+
+      <% else %>
+
       <p>
         <strong><i class="fas fa-thumbs-up"></i> What users love:</strong>
         <%= @product.highest_rating_comment.body %>
@@ -40,6 +48,9 @@
         <strong><i class="fas fa-thumbs-down"></i> What users dislike:</strong>
         <%= @product.lowest_rating_comment.body %>
       </p>
+
+      <% end %>
+
 
     </div><!-- /col -->
 
