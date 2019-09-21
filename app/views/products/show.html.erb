@@ -33,7 +33,7 @@
 
       <p><strong>Average Rating</strong>: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
-      <%if highest_rating_comment = "" %>
+      <%if @product.highest_rating_comment == nil || @product.highest_rating_comment == 0 %>
 
         <p>No comments for this product yet.</p>
 
