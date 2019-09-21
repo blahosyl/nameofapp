@@ -50,7 +50,9 @@
     </div>
     <div class="col-md">
       <%= render 'comments' %>
+      <%= will_paginate @comments, :page_links => false %>
     </div>
   </div>
+  <%= link_to 'Back to products', products_path %>
 
 </div>
