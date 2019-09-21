@@ -1,4 +1,5 @@
-//= require jquery3
-//= require_tree
-//= require jquery_ujs
+//= require jquery
+// = require jquery_ujs
+//= require turbolinks
 //= require jquery.raty.js
+//= require_tree .
