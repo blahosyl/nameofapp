@@ -32,19 +32,19 @@ color: var(--med-light);
 padding-bottom: 40px;
 }
 
-strong {
+h3 {
 text-align: center;
+color: var(--med-light);
+padding-bottom: 20px;
+}
+
+strong {
 color: var(--med-light);
 }
 
 p {
   padding-left: 5%;
   padding-right: 5%;
-}
-
-// Page showing product information
-#notice {
-  padding-top: 40px; //because of navbar
 }
 
 // Navigation bar
@@ -151,6 +151,16 @@ form .btn
   background-color: inherit;
   border: none;
   color: white;
+}
+
+
+#product-image {
+  text-align: center;
+}
+
+// New comment form on page showing product information
+#comments-block {
+  margin-top: 30px;
 }
 
 // image carousel

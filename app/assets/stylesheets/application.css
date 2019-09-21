@@ -14,4 +14,5 @@
  *= require_self
  */
 
- 
+/* raty plugin for star ratings */
+ *= require jquery.raty
