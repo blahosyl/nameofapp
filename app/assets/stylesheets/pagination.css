@@ -52,7 +52,7 @@
   clear: both; /*appear at bottom of div*/
   width: 40%;
   margin: 0 auto;
-  padding: 1em 0em;
+  padding: 0.5em;
   cursor: default; }
   .apple_pagination a, .apple_pagination span {
     padding: 0.2em 0.3em; }
