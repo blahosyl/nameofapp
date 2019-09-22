@@ -21,7 +21,7 @@ class SimplePagesController < ApplicationController
       ActionMailer::Base.mail(from: "sylvia.blaho@gmail.com",
         to: @email,
         subject: "Thank you for your message to OrangeBerlin",
-        body: "Hey #{@name}, thank you for contacting us! <br>Your message:<br>#{@message}").deliver_now
+        body: "Hey #{@name}, thank you for contacting us! <br/ >Your message:<br/ >#{@message}").deliver_now
     end
 
   end
