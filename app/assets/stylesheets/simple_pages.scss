@@ -91,6 +91,15 @@ padding-bottom: 4px;
   right: 10%; */
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: var(--med-light);
+}
+
+.welcome_product_link{
+  padding-bottom: 0 !important;
+}
+
 // forms
 
 .field input,
@@ -195,4 +204,30 @@ margin: auto;
 
 .col-sm{
 text-align: center;
+}
+
+.rated {
+  display: inline;
+}
+
+.rated-intable {
+  width: auto;
+}
+
+.comment-name {
+  width: auto;
+}
+
+.comments-table {
+  width: 95%;
+}
+
+.rating-avg {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: inline;
+}
+
+.product-comments{
+  margin-top: 16px !important;
 }

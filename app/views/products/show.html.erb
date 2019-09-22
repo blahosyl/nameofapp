@@ -28,25 +28,28 @@
 
       <p>
         <strong>Price:</strong>
-        <%= @product.price %>
+        &euro; <%= @product.price %>
       </p>
 
-      <p><strong>Average Rating</strong>: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+      <div class="rating-avg">
+        <strong>Average Rating:</strong>
+        <div class="rated" data-score="<%= @product.average_rating %>"></div>
+      </div>
 
       <%if @product.highest_rating_comment == nil || @product.highest_rating_comment == 0 %>
 
-        <p>No comments for this product yet.</p>
+        <p class="product-comments">No comments for this product yet.</p>
 
       <% else %>
 
-      <p>
+      <p class="product-comments">
         <strong><i class="fas fa-thumbs-up"></i> What users love:</strong>
-        <%= @product.highest_rating_comment.body %>
+        &ldquo;<%= @product.highest_rating_comment.body %>&rdquo;
       </p>
 
       <p>
         <strong><i class="fas fa-thumbs-down"></i> What users dislike:</strong>
-        <%= @product.lowest_rating_comment.body %>
+        &ldquo;<%= @product.lowest_rating_comment.body %>&rdquo;
       </p>
 
       <% end %>
@@ -59,7 +62,7 @@
     <div class="col-md">
       <%= render 'new_comment' %>
     </div>
-    <div class="col-md">
+    <div class="col-md product-reviews">
       <%= render 'comments' %>
       <%= will_paginate @comments, :page_links => false, class: "apple_pagination" %>
     </div>
