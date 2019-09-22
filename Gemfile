@@ -65,3 +65,6 @@ gem 'cancancan', '~> 1.10'
 
 #pagination
 gem 'will_paginate', '~> 3.1.0'
+
+#payments
+gem 'stripe'
