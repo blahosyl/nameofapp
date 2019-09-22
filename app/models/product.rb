@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  has_many :comments
+  validates :name, presence: true #require a name for a product
 
   # return a filtered list of products
   def self.search(search_term)
@@ -7,5 +9,19 @@ class Product < ApplicationRecord
     else
       @products = Product.where("name ilike ?", "%#{search_term}%") #% is the wildcard char, ilike is a Postrgres matching operator that disregards capitalisation and spaces when matching
     end
+  end
+
+  #return the comment with highest rating for this product
+  def highest_rating_comment
+    comments.rating_desc.first
+  end
+
+  #return the comment with lowest rating for this product
+  def lowest_rating_comment
+    comments.rating_asc.first
+  end
+
+  def average_rating
+  comments.average(:rating).to_f
   end
 end
