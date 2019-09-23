@@ -35,11 +35,11 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
   # Unit Testing
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails', '~> 4.0.0.beta2'
   # Functional Testing
   gem 'rails-controller-testing'
   # Auto-creating test data
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails' , '~> 4.10'
 
   end
 
