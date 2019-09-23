@@ -38,6 +38,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   # Functional Testing
   gem 'rails-controller-testing'
+  # Auto-creating test data
+  gem 'factory_bot_rails'
 
   end
 
