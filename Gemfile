@@ -71,3 +71,6 @@ gem 'will_paginate', '~> 3.1.0'
 
 #payments
 gem 'stripe'
+
+#debugging
+gem 'byebug'
