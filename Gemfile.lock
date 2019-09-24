@@ -60,6 +60,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
+    brakeman (4.6.1)
     builder (3.2.3)
     byebug (11.0.1)
     cancancan (1.17.0)
@@ -226,6 +227,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  brakeman
   byebug
   cancancan (~> 1.10)
   devise
