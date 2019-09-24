@@ -1,0 +1,24 @@
+<div class="row">
+  <table class=comments-table>
+    <tr>
+      <td class="comment-name">
+        <%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+      </td>
+      <td class="rated-intable">
+        <div id="average-rating" class="rated" data-score="<%= comment.rating %>"></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        &ldquo;<%= comment.body %>&rdquo;
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <% if signed_in? && current_user.admin? %>
+        <%= link_to 'Destroy', product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+</div>
