@@ -6,7 +6,6 @@ end
 class SimplePagesController < ApplicationController
   def landing_page
     @featured_product = Product.first
-    byebug
     @products = Product.limit(4)
   end
 

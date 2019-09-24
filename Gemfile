@@ -71,3 +71,6 @@ gem 'stripe'
 
 #debugging
 gem 'byebug'
+
+#security scanner
+gem 'brakeman'
