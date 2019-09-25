@@ -82,5 +82,4 @@ gem 'brakeman'
 gem 'dalli'
 
 #cache store
-gem 'redis'
 gem 'redis-rails'
