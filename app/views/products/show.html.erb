@@ -70,6 +70,7 @@
       <%= render 'new_comment' %>
     </div>
     <div class="col-md product-reviews">
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
       <%= render 'comments' %>
       <%= will_paginate @comments, :page_links => false, class: "apple_pagination" %>
     </div>
