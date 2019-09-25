@@ -1,13 +1,18 @@
+<% cache product do %>
+
 <div class="col-sm">
+
   <%= link_to image_tag(product.image_url, class: "img-fluid"), product %>
   <%= link_to product do %>
-   <h2><%= product.name %></h2>
-   <% end %>
+  <h2><%= product.name %></h2>
+  <% end %>
   <p><%= product.description %></p>
   <strong>&euro; <%=product.price%></strong>
   <p><%= link_to 'Show', product %>
     <% if signed_in? && current_user.admin? %>
     <%= link_to 'Edit', edit_product_path(product) %> <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
-   </p>
+  </p>
 </div><!-- /col -->
+
+<% end %>

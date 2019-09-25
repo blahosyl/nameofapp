@@ -8,6 +8,8 @@
     <%= link_to 'Back', products_path %>
   </p>
   <div class="row">
+    <% cache(cache_key_for_products) do %>
+
     <div class="col-md" id="product-image">
       <%= image_tag(@product.image_url, class: "img-fluid img-zoom", data_zoom_image: "@product.product_image.url") %>
     </div>
@@ -59,10 +61,10 @@
 
       <% end %>
 
-
     </div><!-- /col -->
+    <% end %><!-- end of cache product -->
+  </div><!-- end of row -->
 
-  </div>
   <div class=row  id="comments-block">
     <div class="col-md">
       <%= render 'new_comment' %>
