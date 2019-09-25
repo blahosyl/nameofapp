@@ -62,4 +62,15 @@ Rails.application.configure do
 
   # any dynamic links that show up inside emails from development environment generate the right URLs
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+  #cache store with the dalli gem`
+  config.cache_store = :mem_cache_store,
+                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                    {:username => ENV["MEMCACHIER_USERNAME"],
+                     :password => ENV["MEMCACHIER_PASSWORD"],
+                     :failover => true,
+                     :socket_timeout => 1.5,
+                     :socket_failure_delay => 0.2,
+                     :down_retry_delay => 60
+                    }
 end

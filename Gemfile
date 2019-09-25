@@ -77,3 +77,6 @@ gem 'byebug'
 
 #security scanner
 gem 'brakeman'
+
+#caching
+gem 'dalli'
