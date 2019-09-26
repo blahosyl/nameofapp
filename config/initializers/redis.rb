@@ -5,3 +5,4 @@ else if Rails.env.staging?
 else
   $redis = Redis.new(host: 'localhost', port: 6379)
 end
+end
