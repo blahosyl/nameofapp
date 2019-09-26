@@ -112,4 +112,8 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  #Allow ActionCable
+  config.web_socket_server_url = "wss://orange-berlin.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://your-app-name.herokuapp.com', 'http://orange-berlin.herokuapp.com']
 end
