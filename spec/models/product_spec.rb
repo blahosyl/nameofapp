@@ -28,6 +28,15 @@ describe Product do
     end
   end
 
+  # product created without an image url should not be valid
+  context "when product gets created" do
+    let(:product) { Product.new(name: "anything", description: "anything", price: 12, image_url: nil) }
+
+    it "is not valid without a product_url" do
+      expect(Product.new).not_to be_valid
+    end
+  end
+
   # product created without a price should not be valid
   context "when product gets created" do
     let(:product) { Product.new(name: "anything", description: "anything", price: nil, image_url: "anything") }
