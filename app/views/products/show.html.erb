@@ -72,6 +72,9 @@
       <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
       <%= render 'comments' %>
       <%= will_paginate @comments, :page_links => false, class: "apple_pagination" %>
+      <div class="page-counter">
+        <strong>Did you know? This product has already been viewed <%= product_show_counter %> times. </strong>
+      </div>
     </div>
   </div>
   <%= link_to 'Back to products', products_path %>
