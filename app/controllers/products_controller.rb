@@ -83,10 +83,11 @@ class ProductsController < ApplicationController
     end
 
     def product_show_counter
-      counter = $redis.incr("page_counter")
-      return counter if Rails.env.production?
-      $redis.bgsave counter
-      rescue Exception => ex
-        Rails.logger.error "ERROR sending data to Redis: ex: #{ex.inspect}"
-    end
+  counter = $redis.incr("page_counter")
+  return counter if Rails.env.production?
+  $redis.bgsave
+  counter
+  rescue Exception => ex
+    Rails.logger.error "ERROR sending data to Redis: ex: #{ex.inspect}"
+end
 end
