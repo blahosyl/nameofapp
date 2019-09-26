@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource # check user permissions to see if they are authorised to perform the action
+  helper_method :product_show_counter
 
   # GET /products
   # GET /products.json
@@ -79,5 +80,13 @@ class ProductsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :colour, :price)
+    end
+
+    def product_show_counter
+      counter = $redis.incr("page_counter")
+      return counter if Rails.env.production?
+      $redis.bgsave counter
+      rescue Exception => ex
+        Rails.logger.error "ERROR sending data to Redis: ex: #{ex.inspect}"
     end
 end
