@@ -126,4 +126,7 @@ Rails.application.configure do
 
   #deal with outdated Dalli gem
   config.active_record.cache_versioning = false
+  #Allow ActionCable
+  config.web_socket_server_url = "wss://orange-berlin.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://your-app-name.herokuapp.com', 'http://orange-berlin.herokuapp.com']
 end

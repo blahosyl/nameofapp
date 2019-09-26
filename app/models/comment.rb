@@ -7,6 +7,8 @@ class Comment < ApplicationRecord
   validates :product, presence: true
   validates :rating, numericality: { only_integer: true }
 
+  after_create_commit { CommentUpdateJob.perform_later(self, self.user) }
+
   #rank the ratings in descending order
   scope :rating_desc, -> { order(rating: :desc) }
 

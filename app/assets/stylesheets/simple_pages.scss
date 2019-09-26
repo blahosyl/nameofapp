@@ -126,11 +126,13 @@ text-align: center;
 .new_user .field,
 .new_user .btn,
 .new_user .links,
+
 form .btn
   {
   height: 100%;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 
@@ -163,6 +165,9 @@ form .btn
   color: white;
 }
 
+.stripe-btn {
+  margin-bottom: 40px;
+}
 
 #product-image {
   text-align: center;

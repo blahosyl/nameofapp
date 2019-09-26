@@ -6,5 +6,11 @@ FactoryBot.define do
     first_name {"Test"}
     last_name {"User"}
     admin {false}
+
+    factory :admin do
+      first_name { "Admin" }
+      last_name { "User" }
+      admin { true }
+    end
   end
 end

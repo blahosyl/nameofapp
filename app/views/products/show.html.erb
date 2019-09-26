@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid" data-product-id="<%= @product.id %>">
 
-<div class="container-fluid">
   <p>
     <% if signed_in? && current_user.admin? %>
     <%= link_to 'Edit', edit_product_path(@product) %> |
@@ -33,7 +32,7 @@
         &euro; <%= @product.price %>
       </p>
 
-      <%= form_with(url: '/payments/create') do |form| %>
+      <%= form_with(url: '/payments/create', class:'stripe-btn') do |form| %>
       <%= render partial: "shared/stripe_checkout_button" %>
       <%= hidden_field_tag(:product_id, @product.id) %>
       <% end %>
@@ -70,6 +69,7 @@
       <%= render 'new_comment' %>
     </div>
     <div class="col-md product-reviews">
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
       <%= render 'comments' %>
       <%= will_paginate @comments, :page_links => false, class: "apple_pagination" %>
       <div class="page-counter">
