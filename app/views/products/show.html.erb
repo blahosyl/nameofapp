@@ -72,8 +72,8 @@
     <div class="col-md product-reviews">
       <%= render 'comments' %>
       <%= will_paginate @comments, :page_links => false, class: "apple_pagination" %>
-      <div id="page-counter">
-        <h5>Did you know? This product has already been viewed <%= product_show_counter %> times. </h5>
+      <div class="page-counter">
+        <strong>Did you know? This product has already been viewed <%= product_show_counter %> times. </strong>
       </div>
     </div>
   </div>
