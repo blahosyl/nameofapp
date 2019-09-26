@@ -36,3 +36,4 @@ yarn-debug.log*
 sendgrid.env
 .DS_Store
 vendor/assets/.DS_Store
+test.js
