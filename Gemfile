@@ -54,6 +54,7 @@ end
 
 #communicates with PostgreSQL databases
 group :production do
+  gem 'redis'
   gem 'pg', '~>0.20'
 end
 
