@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   end
 
   #permit first_name and last_name with Devise
-  class ApplicationController < ActionController::Base
     before_action :configure_permitted_parameters, if: :devise_controller?
 
     protected
@@ -15,4 +14,3 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name] )
     end
   end
-end
