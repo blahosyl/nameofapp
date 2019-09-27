@@ -1,4 +1,7 @@
+<% if @product.highest_rating_comment == nil || @product.highest_rating_comment == 0 %>
+<% else %>
 <strong>All reviews</strong>
+<% end %>
 
 <% @comments.each do |comment| %>
   <%= render comment %>
