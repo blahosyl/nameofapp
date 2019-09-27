@@ -1,5 +1,5 @@
 App.product = App.cable.subscriptions.create("ProductChannel", {
-  connected: function() {
+  connected: function(data) {
     // Called when the subscription is ready for use on the server
   },
 
@@ -13,7 +13,7 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     $('.product-reviews').prepend(data.comment);
     $("#average-rating").attr('data-score', data.average_rating);
     refreshRating();
-  }
+  },
 
   listen_to_comments: function() {
     // Called when there's incoming data from a specific product channel
@@ -25,5 +25,7 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 });
 
 $(document).on('turbolinks:load', function() {
-  App.product.listen_to_comments();
+  setTimeout(function() {
+    App.product.listen_to_comments();
+  }, 500);
 });
