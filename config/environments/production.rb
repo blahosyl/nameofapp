@@ -40,7 +40,12 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
-  # config.action_cable.url = 'wss://example.com/cable'
+
+
+  #Allow ActionCable
+  config.web_socket_server_url = "wss://orange-berlin-staging.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['http://orange-berlin-staging.herokuapp.com', 'http://orange-berlin-staging.herokuapp.com']
+  config.action_cable.url = 'wss://orange-berlin-staging.herokuapp.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
@@ -126,7 +131,5 @@ Rails.application.configure do
 
   #deal with outdated Dalli gem
   config.active_record.cache_versioning = false
-  #Allow ActionCable
-  config.web_socket_server_url = "wss://orange-berlin-staging.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['http://orange-berlin-staging.herokuapp.com', 'http://orange-berlin-staging.herokuapp.com']
+
 end

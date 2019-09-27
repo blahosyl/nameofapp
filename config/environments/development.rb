@@ -76,4 +76,8 @@ Rails.application.configure do
 
   #disable coffeescript
   config.app_generators.javascript_engine = :javascript
+
+  #ActionCable
+  config.action_cable.url = "ws://localhost:3000/cable"
+
 end
