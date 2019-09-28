@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  :authenticate_user! #user has to be signed in
+  before_action :authenticate_user! #user has to be signed in
   load_and_authorize_resource # check user permissions to see if they are authorised to perform the action
   # GET /users
   # GET /users.json
