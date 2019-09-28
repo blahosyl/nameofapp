@@ -42,10 +42,10 @@ describe ProductsController, type: :controller do
         sign_in @user
       end
 
-      it 'redirects to root_path' do
+      it 'redirects to login' do
         get :new
         expect(response).to have_http_status(302)
-        expect(response).to redirect_to(simple_pages_index_path)
+        expect(response).to redirect_to(new_user_session_path)
       end
     end
 
@@ -78,7 +78,7 @@ describe ProductsController, type: :controller do
       it 'cannot edit product' do
         get :edit, params: {id: @product.id}
         expect(response).to have_http_status(302)
-        expect(response).to redirect_to(simple_pages_index_path)
+        expect(response).to redirect_to(new_user_session_path)
       end
     end
 
@@ -124,7 +124,7 @@ describe ProductsController, type: :controller do
     end
     it "destroys product" do
       delete :destroy, params: {id: @product.id}
-      expect(response).to redirect_to simple_pages_index_path
+      expect(response).to redirect_to new_user_session_path
     end
   end
 
