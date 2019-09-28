@@ -7,4 +7,8 @@ class SimplePagesController < ApplicationController
     @products = Product.limit(4)
   end
 
+  def contact_us
+    UserMailer.thank_you(params).deliver
+  end
+
 end
