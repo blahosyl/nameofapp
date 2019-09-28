@@ -129,4 +129,5 @@ Rails.application.configure do
   #Allow ActionCable
   config.web_socket_server_url = "wss://orange-berlin.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['http://orange-berlin-herokuapp.com', 'http://orange-berlin-herokuapp.com']
+  config.action_cable.url = 'wss://orange-berlin.herokuapp.com/cable'
 end
